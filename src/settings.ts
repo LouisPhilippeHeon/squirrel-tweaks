@@ -6,6 +6,7 @@ export interface SquirrelTweaksSettings {
 	pasteUrl: boolean;
 	prettifySymbols: boolean;
 	colorTags: boolean;
+	noDuplicateTabs: boolean;
 }
 
 export type FeatureKey = keyof SquirrelTweaksSettings;
@@ -15,6 +16,7 @@ export const DEFAULT_SETTINGS: SquirrelTweaksSettings = {
 	pasteUrl: true,
 	prettifySymbols: true,
 	colorTags: true,
+	noDuplicateTabs: true,
 };
 
 const SETTINGS_LAYOUT: { key: FeatureKey; name: string }[] = [
@@ -22,6 +24,7 @@ const SETTINGS_LAYOUT: { key: FeatureKey; name: string }[] = [
 	{ key: "pasteUrl", name: "Paste URL into selection" },
 	{ key: "prettifySymbols", name: "Prettify symbols" },
 	{ key: "colorTags", name: "Color tags" },
+	{ key: "noDuplicateTabs", name: "No duplicate tabs" },
 ];
 
 export class SquirrelTweaksSettingTab extends PluginSettingTab {

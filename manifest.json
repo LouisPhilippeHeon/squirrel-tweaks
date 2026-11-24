@@ -3,7 +3,7 @@
   "name": "Squirrel Tweaks",
   "version": "1.0.0",
   "minAppVersion": "1.14.4",
-  "description": "Drag and drop list items, colorizes tags, paste URL into selection and prettify symbols.",
+  "description": "Drag and drop list items, colorizes tags, paste URL into selection, prettify symbols and prevent duplicate tabs.",
   "author": "Louis-Philippe Héon",
   "isDesktopOnly": false
 }

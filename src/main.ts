@@ -2,6 +2,7 @@ import { Plugin } from "obsidian";
 import { ColorTags } from "./features/color-tags";
 import { DragAndDrop } from "./features/drag-and-drop";
 import type { Feature } from "./features/feature";
+import { NoDuplicateTabs } from "./features/no-duplicate-tabs";
 import { PasteUrl } from "./features/paste-url";
 import { PrettifySymbols } from "./features/prettify-symbols";
 import {
@@ -23,6 +24,7 @@ export default class SquirrelTweaksPlugin extends Plugin {
 			pasteUrl: new PasteUrl(this),
 			prettifySymbols: new PrettifySymbols(this),
 			colorTags: new ColorTags(this),
+			noDuplicateTabs: new NoDuplicateTabs(this),
 		};
 
 		this.addSettingTab(new SquirrelTweaksSettingTab(this.app, this));
