@@ -328,17 +328,11 @@ class DragState {
 			const line = afterList
 				? v.placeToMove.getContentEndIncludingChildren().line
 				: v.placeToMove.getFirstLineContentStart().line;
-			const linePos = editor.posToOffset({ line, ch: 0 });
-			const coords = view.coordsAtPos(linePos, -1);
-			if (!coords) {
-				continue;
-			}
+
+			const block = view.lineBlockAt(editor.posToOffset({ line, ch: 0 }));
 
 			v.left = this.leftPadding + (v.level - 1) * this.tabWidth;
-			v.top = coords.top;
-			if (afterList) {
-				v.top += view.lineBlockAt(linePos).height;
-			}
+			v.top = view.documentTop + (afterList ? block.bottom : block.top);
 			v.top -= 8; // Better vertical alignment.
 			candidates.push(v);
 		}
