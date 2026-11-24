@@ -1,0 +1,47 @@
+/* Drag and drop list items */
+.squirrel-dnd-dropping-line {
+	background-color: hsla(var(--interactive-accent-hsl), 0.4);
+}
+
+.squirrel-dnd-dragging-line {
+	opacity: 0.5;
+	background-color: hsla(var(--interactive-accent-hsl), 0.2);
+}
+
+.squirrel-dnd-drop-zone {
+	position: absolute;
+	z-index: 999;
+	height: 4px;
+	background: var(--color-accent);
+	pointer-events: none;
+}
+
+.squirrel-dnd-drop-zone-padding {
+	position: absolute;
+	height: 4px;
+}
+
+body.squirrel-dnd:not(.squirrel-dnd-dragging) .cm-formatting-list,
+body.squirrel-dnd:not(.squirrel-dnd-dragging) .cm-fold-indicator .collapse-indicator {
+	cursor: grab !important;
+}
+
+html body.squirrel-dnd.squirrel-dnd-dragging {
+	cursor: grabbing !important;
+}
+
+/* Color tags */
+body.squirrel-color-tags [data-property-type="tags"] .multi-select-pill {
+	--pill-color: rgba(255, 255, 255, 0.9);
+	--pill-color-hover: var(--pill-color);
+	--pill-color-remove: rgba(255, 255, 255, 0.9);
+	--pill-color-remove-hover: var(--pill-color);
+	background-color: var(--squirrel-tag-color);
+	transition:
+		box-shadow var(--anim-duration-fast),
+		background-color var(--anim-duration-fast);
+}
+
+body.squirrel-color-tags [data-property-type="tags"] .multi-select-pill:hover {
+	box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.1);
+}

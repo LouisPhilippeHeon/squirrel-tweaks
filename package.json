@@ -1,0 +1,23 @@
+{
+  "name": "squirrel-tweaks",
+  "version": "1.0.0",
+  "description": "Drag and drop list items, colorizes tags, paste URL into selection and prettify symbols.",
+  "main": "main.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit && node esbuild.config.mjs production"
+  },
+  "author": "Louis-Philippe Héon",
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.13",
+    "@lezer/common": "^1.5.6",
+    "esbuild": "^0.28.2",
+    "obsidian": "^1.14.4",
+    "typescript": "^5.9.3"
+  }
+}
