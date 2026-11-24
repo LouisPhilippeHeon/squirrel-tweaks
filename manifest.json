@@ -5,5 +5,6 @@
   "minAppVersion": "1.14.4",
   "description": "Drag and drop list items, colorizes tags, paste URL into selection, prettify symbols and prevent duplicate tabs.",
   "author": "Louis-Philippe Héon",
+  "authorUrl": "https://github.com/LouisPhilippeHeon",
   "isDesktopOnly": false
 }
